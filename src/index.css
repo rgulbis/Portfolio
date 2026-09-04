@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Instrument Sans", Helvetica, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-paper: oklch(0.968 0.012 85);
+  --color-card: oklch(0.99 0.008 85);
+  --color-ink: oklch(0.22 0.015 80);
+  --color-body: oklch(0.4 0.014 80);
+  --color-bullet: oklch(0.32 0.014 80);
+  --color-muted: oklch(0.5 0.014 80);
+  --color-label: oklch(0.55 0.012 80);
+  --color-faint: oklch(0.6 0.012 80);
+  --color-strike-text: oklch(0.62 0.012 80);
+  --color-strike: oklch(0.62 0.15 42);
+  --color-mustard: oklch(0.55 0.15 82);
+  --color-rule: oklch(0.9 0.015 85);
+  --color-rule-strong: oklch(0.86 0.02 85);
+  --color-dot: oklch(0.88 0.02 85);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--color-paper);
+  background-image: radial-gradient(var(--color-dot) 1px, transparent 1px);
+  background-size: 26px 26px;
+  background-attachment: fixed;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-mustard);
+}
+
+/* Definition lists collapse to one column on narrow screens */
+@media (max-width: 560px) {
+  .stack dl {
+    grid-template-columns: 1fr !important;
+    gap: 14px 0 !important;
+  }
+  .stack dt {
+    margin-bottom: 2px;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Scroll-driven entrance where supported; a no-op elsewhere */
+@supports (animation-timeline: view()) {
+  [data-rise] {
+    animation: rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+}
