@@ -22,7 +22,7 @@ export const skillGroups = [
       ['Wix', 'Built and shipped a client site on it'],
       ['Figma', 'Working from and making designs'],
       ['Canva', 'Quick graphics and presentation material'],
-      ['GitHub', 'Version control for this site and personal projects'],
+      ['GitHub', 'Version control for this site, school work and personal projects'],
     ],
   },
 ];
