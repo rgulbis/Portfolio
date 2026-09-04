@@ -1,5 +1,5 @@
 import { SectionLabel, ButtonLink } from './primitives.jsx';
-import { projectBullets, experience } from '../content.js';
+import { projectBullets, projectTools, experience, awards } from '../content.js';
 
 export default function Work() {
   return (
@@ -20,7 +20,7 @@ export default function Work() {
           </p>
           <p className="mt-5 max-w-[48ch] text-[clamp(15px,1.9vw,17px)] leading-[1.65] text-body">
             A live donation site for a charity campaign, handed to me as a Figma design, a Stripe
-            account and an empty Wix project. I built it; my teacher oversaw the work.
+            account and an empty Wix project. I built it and my teacher oversaw the work.
           </p>
           <p className="mt-[26px] mb-2.5 font-mono text-[11px] tracking-[0.14em] text-label uppercase">
             What I did
@@ -33,6 +33,19 @@ export default function Work() {
               >
                 <span className="text-mustard">→</span>
                 <span>{line}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-[26px] mb-2.5 font-mono text-[11px] tracking-[0.14em] text-label uppercase">
+            I used
+          </p>
+          <ul className="m-0 flex max-w-[48ch] flex-wrap gap-2 p-0">
+            {projectTools.map((tool) => (
+              <li
+                key={tool}
+                className="list-none border border-rule px-2.5 py-1 font-mono text-[11px] tracking-[0.06em] text-body uppercase"
+              >
+                {tool}
               </li>
             ))}
           </ul>
@@ -75,6 +88,28 @@ export default function Work() {
                 <li key={b}>{b}</li>
               ))}
             </ul>
+          </div>
+        ))}
+        {awards.map((award) => (
+          <div key={award.title} className="border border-rule bg-card px-[22px] py-[26px]">
+            <p className="m-0 font-mono text-[11px] tracking-[0.1em] text-mustard uppercase">
+              {award.date}
+            </p>
+            <h3 className="mt-3 mb-0 text-[21px] font-semibold tracking-[-0.02em]">
+              {award.title}
+            </h3>
+            <p className="mt-1.5 mb-0 text-[13px] text-label">
+              Honours and awards · {award.org}
+            </p>
+            <p className="mt-4 mb-0 text-[15px] leading-[1.6] text-body">{award.description}</p>
+            <a
+              href={award.href}
+              target="_blank"
+              rel="noopener"
+              className="mt-3 inline-block text-[13px] text-muted underline hover:text-ink"
+            >
+              Link!
+            </a>
           </div>
         ))}
       </div>

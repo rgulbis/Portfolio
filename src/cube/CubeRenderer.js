@@ -408,7 +408,7 @@ export default class CubeRenderer {
               { txt: p.rightLine1 ?? 'ABOUT', u: 0.04, v: 0.22, rot: 0, push: 1 },
               { txt: p.rightLine2 ?? 'CONTACT', u: 0.04, v: 0.5, rot: 0, push: 1 },
             ],
-            'hsl(34 7% 33%)',
+            'oklch(0.58 0.17 82)',
             rightSize
           ),
           1: this.faceTexture(

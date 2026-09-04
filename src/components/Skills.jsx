@@ -20,7 +20,25 @@ export default function Skills() {
               {group.items.map(([name, context]) => (
                 <Fragment key={name}>
                   <dt className="text-[15px] font-semibold">{name}</dt>
-                  <dd className="m-0 text-[13px] leading-[1.45] text-muted">{context}</dd>
+                  <dd className="m-0 text-[13px] leading-[1.45] text-muted">
+                    {Array.isArray(context)
+                      ? context.map((part, i) =>
+                          typeof part === 'string' ? (
+                            <Fragment key={i}>{part}</Fragment>
+                          ) : (
+                            <a
+                              key={i}
+                              href={part.href}
+                              target="_blank"
+                              rel="noopener"
+                              className="underline hover:text-ink"
+                            >
+                              {part.text}
+                            </a>
+                          )
+                        )
+                      : context}
+                  </dd>
                 </Fragment>
               ))}
             </dl>

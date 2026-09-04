@@ -12,13 +12,22 @@ export const skillGroups = [
   {
     title: 'Tools & platforms',
     items: [
-      ['Stripe', 'Live donation payments on uznemejimieram.lv'],
+      [
+        'Stripe',
+        [
+          'Live donation payments on ',
+          { text: 'uznemejimieram.lv', href: 'https://www.uznemejimieram.lv/en' },
+        ],
+      ],
       ['Wix', 'Built and shipped a client site on it'],
       ['Figma', 'Working from and making designs'],
       ['Canva', 'Quick graphics and presentation material'],
+      ['GitHub', 'Version control for this site and personal projects'],
     ],
   },
 ];
+
+export const projectTools = ['Figma', 'Wix', 'Stripe'];
 
 export const projectBullets = [
   'Built every page from the Figma design, matching layout, type and spacing, adding creative sulutions where needed.',
@@ -39,6 +48,17 @@ export const experience = [
       'Set up drivers, updates and software to make machines sale-ready.',
       'Ran quality checks on performance and functionality before dispatch.',
     ],
+  },
+];
+
+export const awards = [
+  {
+    date: '05/12/2024',
+    title: '2nd Place in Programming Contest — "Pamestība sāp. Mīlestība glābj."',
+    org: 'Draugiem Group & Vidzemes Tehnoloģiju un dizaina tehnikums (VTDT)',
+    description:
+      'Awarded 2nd place in the web programming competition organized by Draugiem Group and VTDT. Developed a website titled "Pamestība sāp. Mīlestība glābj." focused on the theme of abandoned pets. The full functional prototype was designed and programmed within a strict 4-hour time limit.',
+    href: 'https://www.vtdt.lv/single-post/pamestība-sāp-mīlestība-glābj',
   },
 ];
 
