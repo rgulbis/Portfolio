@@ -66,4 +66,5 @@ export const contact = [
   { label: 'Email', value: 'rgubis41@gmail.com', href: 'mailto:rgubis41@gmail.com' },
   { label: 'Phone', value: '(+371) 29645836', href: 'tel:+37129645836' },
   { label: 'Location', value: 'Cēsis, Latvia' },
+  { label: 'GitHub', value: 'rgulbis', href: 'https://github.com/rgulbis' },
 ];

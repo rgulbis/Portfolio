@@ -19,7 +19,13 @@ export default function Contact() {
               {row.label}
             </p>
             {row.href ? (
-              <a href={row.href} className="text-[clamp(16px,2.2vw,20px)]">
+              <a
+                href={row.href}
+                className="text-[clamp(16px,2.2vw,20px)]"
+                {...(row.href.startsWith('http')
+                  ? { target: '_blank', rel: 'noopener' }
+                  : {})}
+              >
                 {row.value}
               </a>
             ) : (
