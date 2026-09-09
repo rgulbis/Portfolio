@@ -70,7 +70,9 @@ export default function Work() {
             className="block h-auto w-full border border-rule-strong"
           />
           <figcaption className="mt-2.5 font-mono text-[11px] tracking-[0.08em] text-muted">
-            uznemejimieram.lv
+            <a href="https://www.uznemejimieram.lv/en" target="_blank" rel="noopener" className="underline hover:text-ink">
+              uznemejimieram.lv
+            </a>
           </figcaption>
         </figure>
       </article>
